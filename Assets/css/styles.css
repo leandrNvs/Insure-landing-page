@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-Blue: hsl(216, 30%, 68%);
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  --ff-dm: "DM Serif Display", serif;
+  --ff-karla: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-dm);
+}
+
+p,
+button,
+a {
+  font-family: var(--ff-karla);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container .container {
+  width: 100%;
+}
+
+.desktop {
+  display: none;
+}
+
+body {
+  padding-top: 64px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 0;
+}
+
+.hero {
+  background-color: var(--Dark-Violet);
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.hero .container div:last-child {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  color: var(--Very-Light-Gray);
+  font-size: 0.925rem;
+  position: relative;
+}
+
+.hero .container div:last-child h1 {
+  margin-bottom: 1rem;
+}
+
+.hero .container div:last-child p {
+  line-height: 1.5;
+}
+
+a.button {
+  height: 40px;
+  line-height: 36px;
+  width: 120px;
+  text-align: center;
+  display: block;
+  color: var(--Very-Light-Gray);
+  border: 1px solid var(--Very-Light-Gray);
+  margin: 1.5rem auto 0;
+}
+
+.mobile.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile.right {
+  position: absolute;
+  right: 0;
+  bottom: -40%;
+}
+
+.decoration {
+  height: 1px;
+  width: 150px;
+  background-color: var(--Very-Dark-Violet);
+  margin: 0 auto 1rem;
+  opacity: 0.5;
+}
+
+.img-hero {
+  margin: auto;
+}
+
+.large-padding {
+  padding: 8rem 0;
+}
+
+.large-title {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1100px) {
+  .text-center {
+    text-align: center;
+  }
+
+  nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--Very-Dark-Violet)
+      url("../images/bg-pattern-mobile-nav.svg") no-repeat bottom left;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  nav.active {
+    height: calc(100% - 64px);
+  }
+
+  nav a {
+    display: block;
+    color: var(--Very-Light-Gray);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  nav a.button {
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 90%;
+    height: 50px;
+    line-height: 46px;
+  }
+}
+
+.icon {
+  margin: 1rem auto;
+  width: 4rem;
+}
+
+.card {
+  background: var(--Dark-Violet)
+    url("../images/bg-pattern-how-we-work-mobile.svg") no-repeat right center;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.card .right {
+  bottom: unset;
+  top: 0;
+}
+
+.card > a {
+  color: var(#fff);
+}
+
+.gray-text {
+  color: var(--Dark-Grayish-Violet);
+  margin-top: 1rem;
+}
+
+footer {
+  background: var(--Very-Light-Gray)
+    url("../images/bg-pattern-footer-mobile.svg") no-repeat left top;
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer a {
+  color: var(--Dark-Violet);
+  text-transform: uppercase;
+}
+
+.footer-title {
+  font-size: 1rem;
+  font-family: var(--ff-karla);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--Dark-Grayish-Violet);
+}
+
+.medias {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.footer-decoration {
+  border-bottom: 1px solid #dad6d6;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1100px) {
+  .icon,
+  .decoration {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero .container,
+  .container {
+    width: 80%;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  button[aria-label="Toggle menu"] {
+    display: none;
+  }
+
+  nav a {
+    color: var(--Dark-Grayish-Violet);
+  }
+
+  nav a.button {
+    color: var(--Dark-Violet);
+    border: 1px solid #000;
+    margin: 0;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+  }
+
+  .desktop.right,
+  .desktop.left {
+    position: absolute;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .desktop.right {
+    right: 0;
+    top: 0;
+  }
+
+  .desktop.left {
+    left: 0;
+    top: 20%;
+  }
+
+  .hero .container div:first-child img.desktop {
+    position: absolute;
+    top: 10%;
+  }
+
+  .hero .container div:first-child {
+    height: 100%;
+  }
+
+  .hero .container div:last-child {
+    text-align: left;
+    padding-left: 0;
+    background-color: transparent;
+  }
+
+  .hero .container div:last-child a {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .decoration {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    margin-bottom: 8rem;
+  }
+
+  .decoration.desktop {
+    background-color: #fff;
+  }
+
+  .hero .container div {
+    flex-basis: 50%;
+    position: relative;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .card {
+    background: var(--Dark-Violet)
+      url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat right center;
+    background-size: contain;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .three-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+
+  .container.three-columns {
+    padding: 6rem 0;
+  }
+
+  .two-columns {
+    grid-template-columns: 60% auto;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .two-columns .large-title {
+    text-align: left;
+  }
+
+  .large-title {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  footer {
+    padding-top: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  footer div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  footer > div {
+    flex: 1;
+    align-items: flex-start;
+  }
+}
